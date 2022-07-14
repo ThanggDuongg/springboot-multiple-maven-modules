@@ -1,11 +1,13 @@
 package com.ddt.domain.dtos.common;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
 import java.sql.Timestamp;
 
 @Data
+@Schema(hidden = true)
 @Accessors(chain = true)
 public class ApiResponse<T> {
     private boolean success;

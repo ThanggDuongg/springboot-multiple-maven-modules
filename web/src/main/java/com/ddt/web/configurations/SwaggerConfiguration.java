@@ -1,5 +1,7 @@
-package web.configurations;
+package com.ddt.web.configurations;
 
+import com.ddt.domain.dtos.common.ApiResponse;
+import com.ddt.domain.dtos.user.UserResponse;
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
@@ -32,6 +34,8 @@ public class SwaggerConfiguration {
     @Bean
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
+//                .ignoredParameterTypes(ApiResponse.class)
+//                .ignoredParameterTypes(UserResponse.class)
                 .select()
                 .apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.any())

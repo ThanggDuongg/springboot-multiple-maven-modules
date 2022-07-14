@@ -14,9 +14,9 @@ import java.util.Set;
 public interface UserMapper {
     UserMapper INSTANCE = Mappers.getMapper(UserMapper.class);
 
-    @Mapping(source = "Id", target = "id")
-    @Mapping(source = "Email", target = "email")
-    @Mapping(source = "Name", target = "name")
+//    @Mapping(source = "id", target = "id")
+//    @Mapping(source = "email", target = "email")
+//    @Mapping(source = "name", target = "name")
     UserResponse userEntityToUserResponse(UserEntity userEntity);
 
     @Mapping(source = "email", target = "Email")
@@ -24,8 +24,8 @@ public interface UserMapper {
     @Mapping(source = "password", target = "Password")
     UserEntity createUserRequestToUserEntity(CreateUserRequest createUserRequest);
 
-    @Mapping(source = "email", target = "Email")
-    @Mapping(source = "name", target = "Name")
-    @Mapping(source = "password", target = "Password")
+//    @Mapping(source = "Id", target = "id")
+//    @Mapping(source = "Email", target = "email")
+//    @Mapping(source = "Name", target = "name")
     List<UserResponse> listUserEntityToListUserResponse(List<UserEntity> userEntities);
 }

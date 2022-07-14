@@ -1,4 +1,4 @@
-package web.controllers;
+package com.ddt.web.controllers;
 
 import com.ddt.domain.dtos.common.ApiResponse;
 import com.ddt.domain.dtos.user.CreateUserRequest;
@@ -13,7 +13,7 @@ import java.util.List;
 
 @Tag(name = "UserAccount", description = "APIs quản lý User")
 @CrossOrigin(maxAge = 3600)
-@RequestMapping("api/v1/user")
+@RequestMapping(value = "api/v1/user")
 public interface UserController {
     @PostMapping("/create")
     @Operation(summary = "Thêm mới user & account vào hệ thống")
